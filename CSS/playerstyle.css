@@ -1,0 +1,479 @@
+body{
+    background: linear-gradient(45deg, red, blue);
+    width: auto;
+    height: auto;
+
+}
+/* Main Section */
+main{
+    width: 70%;
+    display: inline-block;
+}
+/* Header section */
+
+
+/*  */
+/* all the divs inside the navigation bar should be placed side by side*/
+.navigation-bar > div {
+	display: inline-block;
+}
+/* animation for the website logo */
+@keyframes rotating {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.navigation-bar {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 5%;
+    padding-right: 5%;
+    transition: all ease-in-out 1s;
+
+}
+
+
+
+/* website logo image */
+.website-logo img {
+	height: 50px;
+	width: 50px;
+	border-radius: 100%;
+	animation-name: rotating;
+	animation-timing-function: ease-in-out;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+/* website function */
+.website-name h4 {
+	color: rgb(80, 220, 255);
+}
+/* website title and general description */
+.title-combo > div {
+	vertical-align: middle;
+	display: inline-block;
+}
+/* animation for favoutites text */
+@keyframes flexible {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotateY(360deg);
+	}
+	75% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scaleX(1);
+	}
+}
+/* favourites text */
+.favs {
+	animation-name: flexible;
+	animation-timing-function: ease-in-out;
+	animation-duration: 2s;
+	perspective: 10000px;
+	transform-style: preserve-3d;
+	animation-iteration-count: infinite;
+}
+/* search bar */
+.search-bar {
+	width: 20%;
+	position: relative;
+}
+/* changing the default style of the input bar */
+.search-bar input {
+	width: 100%;
+	font-size: 16px;
+	text-decoration: none;
+	border-radius: 18px;
+	border: none;
+	padding: 5px;
+	font-weight: 500;
+	text-align: center;
+	transition: all ease-in-out 0.1s;
+}
+/* search icon for input bar */
+.search-ico {
+	color: rgba(0, 0, 0, 0.5);
+}
+/* mic icon for input */
+.mic-ico {
+	color: rgba(0, 0, 0, 0.5);
+}
+/* search icon */
+.search-bar > div:nth-child(1) {
+	display: inline-block;
+	position: absolute;
+	width: min-content;
+	left: 5%;
+	top: 10%;
+	transition: all ease-in-out 0.1s;
+}
+/* mic icon */
+.search-bar > div:nth-child(3) {
+	display: inline-block;
+	position: absolute;
+	width: min-content;
+	right: 0%;
+	top: 10%;
+	transition: all ease-in-out 0.1s;
+}
+/* when the user clicks on the search bar, there should be no blue outlining */
+input:focus {
+	outline: none;
+}
+/* animation for bell image */
+@keyframes ringing_bell {
+	0% {
+		transform: rotate(-15deg);
+	}
+	50% {
+		transform: rotate(15deg);
+	}
+	100% {
+		transform: rotate(-15deg);
+	}
+}
+/* notification bell image */
+.notification-bell img {
+	width: 30px;
+	height: 30px;
+	animation-name: ringing_bell;
+	animation-duration: 0.5s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+/* profile picture of the user */
+.profile-picture img {
+	width: 45px;
+	height: 45px;
+	border-radius: 100%;
+}
+.website-name h1 ,h4{
+    color: aqua;
+}
+
+/* Artist Playlist section */
+#Playlist{
+    padding-top: 5%;
+}
+* { box-sizing: border-box; }
+
+#content {
+  
+  height: 350px;
+  width: 780px;
+  padding: 0.5rem;
+  display: flex;
+}
+
+#left,
+#right {
+  background-color: rgba(10, 10, 10, 0.5);
+  
+  padding: 0.5rem;
+  flex-grow: 1;
+  color: #fff;
+  border-radius: 10%;
+}
+#left img{
+    height: 320px;
+    width: 350px;
+	border-radius: 50%;
+}
+.about1{
+    width:380px;
+    height: 160px;
+  
+  }
+  .about2{
+    width:380px;
+    height:160px;
+  
+  }
+  
+#different-song-list{
+    padding-top: 10%;
+
+}
+
+
+/* differentPlaylist  */
+.song-list{
+    display: inline-block;
+    margin: .5%;
+  
+  }
+  
+  .song-list {
+    background: hsl(254, 87%, 18%);
+    height: 60px;
+    width: 82%;
+  }
+
+ /* Aside section */
+ aside{
+    display: inline-block;
+    width: 21%;
+    vertical-align: top;
+    margin-left: 4%;
+    position:fixed;
+	overflow: scroll;
+}
+.queue{
+    padding-top: 30px;
+    display: inline-block;
+}
+
+.queue-section h1{
+ color: aqua;
+ text-decoration: solid;
+ padding-left: 10px;
+ display: inline-block;
+ margin: 5%;
+
+}
+
+.song-collection div{
+    padding-top: 5%;
+   display: flex; 
+   flex-direction:row;
+   
+}
+.song-collection img{
+    height: 80px;
+    width: 80px;
+    padding-top: 30px;
+    
+}
+.song-collection p{
+    color: #dcdcdc;
+    padding-top: 30px;
+    padding-right: 20px;
+}
+.song-collection h4{
+    color: aqua;
+    list-style-type: none;
+    
+    
+}
+ul li{
+    list-style-type: none;
+}
+.song-collection h5{
+    color: aqua;
+    /* padding-left: 10px; */
+    
+}
+.song-collection i{
+    color: red;
+    padding: 50px;
+    padding-left: 40px;
+}
+
+
+/* Inside song-list image */
+.song-list{
+	display: flex;
+}
+.song-list img{
+	height: 60px;
+	width: 70px;
+	padding-left: 2%;
+}
+
+.song-list h4{
+	color: aqua;
+	padding-left: 2%;
+}
+.song-list h3{
+	color: aqua;
+	padding-left: 5%;
+}
+.song-list h5{
+	color: aqua;
+	padding-left: 9%;
+}
+.song-list i{
+	color: red;
+	padding-left: 200px;
+	padding-top: 3%;
+	
+}
+#right button{
+	background: linear-gradient(45deg,rgb(47, 0, 255),rgb(255, 0, 212));
+	width: 150px;
+	height: 30px;
+	border: none;
+	
+}
+#right h3{
+	text-align: end;
+	font-family: 'Redressed', cursive;
+}
+.about1 h2{
+	text-align: end;
+	color: aqua;
+	padding-top: 8%;
+}
+.block {
+    position: fixed;
+    background: #2184cd;
+    color: #fff;
+    padding: 20px;
+    width: auto;
+}
+
+/* bottom section */
+/* Footer section starts here*/
+/* this is the container for the whole footer */
+footer {
+	position: fixed;
+	bottom: 1px;
+	width: 101%;
+	height: 65px;
+	left: -.43%;
+	background-color: #51ff00;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: center;
+	flex-wrap: nowrap;
+	padding: 0px 3%;
+	box-sizing: border-box;
+	z-index: 6;
+}
+/* footer is divided into 3 parts */
+/* 1. first part of the footer */
+.active-song-description {
+	/* border:1px solid white; */
+	height: 90%;
+	width: 25%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+/* the current song which is being played, this is the image container for that. */
+#song-image {
+	width: 50px;
+	height: 50px;
+	min-width: 50px;
+	min-height: 50px;
+}
+/* current song image */
+#song-image img {
+	width: 100%;
+	height: 100%;
+}
+/* heart and ban icon */
+.heart-and-ban-icon {
+	height: 100%;
+	padding-top: 4%;
+}
+/* song decscription */
+.song-desc {
+	margin-right: 1%;
+	margin-left: 1%;
+}
+/* song name */
+.song-desc div:nth-child(1) {
+	font-size: 14px;
+}
+/* song author */
+.song-desc div:nth-child(2) {
+	font-size: 12px;
+}
+
+/* 2. Second part of the footer*/
+.player {
+	width: 45%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: nowrap;
+}
+/* controls is the container for all the center controls of the player */
+.controls {
+	width: 40%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 20px;
+}
+/* this is the song-duration slider */
+#slider {
+	width: 100%;
+	font-size: 12px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center;
+	margin-top: 5px;
+}
+/* ////////// */
+.time {
+	margin: 0px 10px;
+}
+
+/* adjusting the slider for better visuals */
+.slidecontainer {
+	width: 100%;
+}
+/* for audio and main center player */
+.slider {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 5px;
+	background: #d3d3d3;
+	outline: none;
+	opacity: 0.5;
+	-webkit-transition: 0.2s;
+	transition: opacity 0.2s;
+}
+/* hover effect for the slider */
+.slider:hover {
+	opacity: 1;
+}
+/* these are for adjusting the dimensions and default styling of the long-slider */
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 17px;
+	height: 17px;
+	border-radius: 50%;
+	background: #007bff;
+	cursor: pointer;
+}
+/* this is the circular thumb, which can be moved across the div */
+.slider::-moz-range-thumb {
+	width: 25px;
+	height: 25px;
+	background: #4caf50;
+	cursor: pointer;
+}
+
+/* third part of the footer */
+/* this contains the extra icons and slider for volume */
+/* this is also a container */
+.extras {
+	width: 20%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}

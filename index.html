@@ -1,0 +1,801 @@
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Song Studio</title>
+            <meta charset="UTF-8">
+            <link rel="shortcut icon" type="image/png" href="https://cdn.dribbble.com/users/230124/screenshots/6923871/wip.png"/>
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+            <link rel="stylesheet" href="CSS/style.css">
+            <!-- <script src="JS/index.js"></script> -->
+        </head>
+        <body>
+            <!-- First header section -->
+        
+            <nav class="navigation-bar">
+                <!-- this div contains the logo and title os the page -->
+                <div class="title-combo">
+                    <div class="website-logo">
+                        <img src="image/website_logo.svg">
+                    </div>
+                    <div class="website-name">
+                        <h1>
+                            Song Studio
+                        </h1>
+                        <h4>
+                             Music Player
+                        </h4>
+                    </div>
+                </div>
+                <!-- this is the animated favourites text -->
+                <div class="favs">
+                    <h4>
+                        Favourites
+                    </h4>
+                </div>
+                <!-- this is for search bar -->
+                <div class="search-bar">
+                    <div>
+                        <!-- magnifying glass- search icon -->
+                        <i class="fas fa-search search-ico"></i>
+                    </div>
+                    <input type="text" name="search" placeholder="Search">
+                    <div>
+                        <!-- mic icon -->
+                        <i class="fas fa-microphone mic-ico"></i>
+                    </div>
+                </div>
+                <!-- this is for notification bell -->
+                <div class="notification-bell">
+                    <img src="image/bell_icon.svg">
+        
+                </div>
+                <!-- this is for profile picture -->
+                <div class="profile-picture">
+                    <img src="image/profile_picture.svg">
+                </div>
+            </nav>
+        
+    <!-- Flooting image section -->
+    <main>
+        <aside class="aside-section1">
+            <section id="images-section">
+                <div class="container">
+                    <input type="radio" name="slider" id="item-1" checked>
+                    <input type="radio" name="slider" id="item-2">
+                    <input type="radio" name="slider" id="item-3">
+                  <div class="cards">
+                    <label class="card" for="item-1" id="song-1">
+                      <img src="image/image_processing20200312-9327-1s1hvk1.gif" alt="song" style="height: 384px;">
+                    </label>
+                    <label class="card" for="item-2" id="song-2">
+                      <img src="image/image_processing20200908-23228-1fasxce.gif" alt="song" style="height: 384px;">
+                    </label>
+                    <label class="card" for="item-3" id="song-3">
+                      <img src="image/image_processing20200830-11319-1sorkng.gif" alt="song" style="height: 384px;">
+                    </label>
+                  </div>
+                 
+                </div>
+            </section>
+
+                <!-- Lateset Release -->
+                <section id="relesae-section">
+                
+                <div class="releases">
+                    
+                    <h2>Lateset Release</h2>
+                    <div class="Block-modification">
+                    <div class="Block1">
+                    <img src="image/barns-dribble.webp" onclick="window.open('player.html', '_blank');">
+                     <div class="inside-block1">
+                    
+                    <ul>
+                        <li><p>Onism</p></li>
+                        <li><p>AUG,2017</p></li>
+                    </ul>
+                    </div> 
+                    
+                   
+                    <div class="Block1-helper">
+                    <ul>
+                    <li>
+                         <a href=""><i class="fas fa-ellipsis-h fa-2x">
+                         
+                        </i></a></li>
+                    <li><p>4:44</p></li>
+                    </ul>
+                    </div>
+                    </div>
+                    <div class="Block2">
+                    <img src="image/___________________3__4x.webp" onclick="window.open('player.html', '_blank');">
+                    <div class="inside-block2">
+                    
+                        <ul>
+                            <li><p>Onism</p></li>
+                            <li><p>AUG,2017</p></li>
+                        </ul>
+                        </div> 
+                        
+                       
+                        <div class="Block1-helper">
+                        <ul>
+                        <li><i class="fas fa-ellipsis-h fa-2x"></i></li>
+                        <li><p>4:44</p></li>
+                        </ul>
+                        </div>
+
+                    
+                    </div>
+                    </div>
+
+                    <div class="Block-modification">
+                    <div class="Block3">
+                        <img src="image/e1313e967b4525e707e13408b6b1c943.webp" onclick="window.open('player.html', '_blank');">
+                        <div class="inside-block1">
+                    
+                            <ul>
+                                <li><p>Onism</p></li>
+                                <li><p>AUG,2017</p></li>
+                            </ul>
+                        </div> 
+                            
+                           
+                        <div class="Block1-helper">
+                            <ul>
+                            <li><i class="fas fa-ellipsis-h fa-2x"></i></li>
+                            <li><p>4:44</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="Block4">
+                        <img src="image/music-scene-dribbble.webp" onclick="window.open('player.html', '_blank');">
+                         <div class="inside-block2">
+                    
+                            <ul>
+                                <li><p>Onism</p></li>
+                                <li><p>AUG,2017</p></li>
+                            </ul>
+                            </div> 
+                            
+                           
+                            <div class="Block1-helper">
+                            <ul>
+                            <li><i class="fas fa-ellipsis-h fa-2x"></i></li>
+                            <li><p>4:44</p></li>
+                            </ul>
+                            </div>
+                    </div>
+                    </div>
+                </div>
+                </section>
+                <!-- Popular Artist -->
+
+                <h2>Popular Artist</h2>
+                <section class="Popular-artist">
+                    <!-- <h2>Popular Artist</h2> -->
+
+
+                    <div class="responsive">
+                      <div class="gallery">
+                        
+                          <img src="image/image.png"  width="300" height="150">
+                        
+                        <div class="desc">Ed Sheeran</div>
+                      </div>
+                    </div>
+                    
+                    
+                    <div class="responsive">
+                      <div class="gallery">
+                        
+                          <img src="image/584c61754bb61a153834db84c1155e41.jpg" alt="Forest" width="300" height="150">
+                        
+                          <div class="desc">ColdPlay</div>
+                      </div>
+                    </div>
+                    
+                    <div class="responsive">
+                      <div class="gallery">
+                        
+                          <img src="image/33bac8a4cd6f897e940a82f8b866e822.webp" alt="Northern Lights" width="300" height="150">
+                        
+                          <div onclick="Playsong" class="desc">Zayn</div>
+                      </div>
+                    </div>
+                    
+                    <div class="responsive">
+                      <div class="gallery">
+                        
+                          <img src="image/b545da4fe027acbdf64f3186da568509.webp" alt="Mountains" width="300" height="150">
+                        
+                          <div class="desc">Charlie Puth</div>
+                      </div>
+                    </div>
+                    <div class="responsive">
+                        <div class="gallery">
+                          
+                            <img src="image/imagine_dragon_4x.jpg" alt="Mountains" width="300" height="150">
+                          
+                            <div class="desc">Imagine Dragon</div>
+                        </div>
+                      </div>
+                      <div class="responsive">
+                        <div class="gallery">
+                          
+                            <img src="image/jb.jpg" alt="Mountains" width="300" height="150">
+                          
+                            <div class="desc">Justin Bieber</div>
+                        </div>
+                      </div>
+
+                </section>
+
+                <!-- List of song item-type -->
+                <section class="List-songitem">
+                    <div class="list-item">    
+                    <h3 id="item1">Stations</h3>
+                    <img src="image/image_processing20200427-30692-10yehzl.gif">
+                     <h3 id="item2">WorkOut</h3>
+                    <img src="image/image_processing20200113-30743-qsky5y.gif">
+                    <h3 id="item3">Love</h3>
+                    <img src="image/image_processing20200214-32201-1k9tl2b.gif">
+                    <h3 id="item4">Chill</h3>
+                    <img src="image/heytvm_bones_universe800.gif">
+                    <h3 id="item5">Party</h3>
+                    <img src="image/image.gif">
+                    <h3 id="item6">Dance</h3>
+                    <img src="image/800x600__2_.gif">
+                    <h3 id="item7">Enjoy</h3>
+                    <img src="image/gif-.gif">
+                    </div>
+                </section>
+
+                <!-- Type of song  -->
+                <section class="type-song">
+                    <div class="song-mode">
+                        
+                        <!-- <h3 class="text-part">Party</h3>      -->
+                        <div class="text-part">
+                            <span>Party</span> 
+                            <img src="image/22460962b9a1b98d54d8c1360ffc2320.png">
+                       
+                        </div>
+                        <div class="text-part1" >
+                            <span>Electronic</span> 
+                        <img src="image/musicfest.png">
+                        </div>
+                        <div class="text-part2" >
+                            <span>Road Trip</span> 
+                        <img src="image/060a3b0d42ff03a87fb73f4b2b9f4d5b.webp">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Latest-english -->
+                <h2>Latest English</h2>
+                <section class="latest-english">
+                   
+                    <div class="responsive1">
+                        <div class="gallery1">
+                          
+                            <img src="image/ad87b81cebf310f7eb5397e7a5d4516f.webp"  width="300" height="150">
+                          
+                          <div class="desc1">Neil Young <br> AUG,2017</div>
+                        </div>
+                      </div>
+                      
+                      
+                      <div class="responsive1">
+                        <div class="gallery1">
+                          
+                            <img src="image/52a7e26511b318bf486b8babd3a5301d.webp" alt="Forest" width="300" height="150">
+                          
+                            <div class="desc1">The Smiths <br> AUG,2017</div>
+                        </div>
+                      </div>
+                      
+                      <div class="responsive1">
+                        <div class="gallery1">
+                          
+                            <img src="image/2bc26bc1fcdc1f14634b5baee81af873.webp" alt="Northern Lights" width="300" height="150">
+                          
+                            <div class="desc1">Johnny Cash <br> AUG,2017</div>
+                        </div>
+                      </div>
+                      
+                      <div class="responsive1">
+                        <div class="gallery1">
+                          
+                            <img src="image/026941ad6f980292d315da9b4639fda1.webp" alt="Mountains" width="300" height="150">
+                          
+                            <div class="desc1">The Beatles <br> AUG,2017</div>
+                        </div>
+                      </div>
+                      <div class="responsive1">
+                          <div class="gallery1">
+                            
+                              <img src="image/2117ac635029175fe4de5646bcfbe009.webp" alt="Mountains" width="300" height="150">
+                            
+                              <div class="desc1">Bob Dylan<br> AUG,2017</div>
+                          </div>
+                        </div>
+                        <div class="responsive1">
+                          <div class="gallery1">
+                            
+                              <img src="image/0a10a84e30c25c17686fe9514b5cb692.png" alt="Mountains" width="300" height="150">
+                            
+                              <div class="desc1">The Beach Boys  <br> AUG,2017</div>
+                          </div>
+                        
+                </div>
+                </section>
+
+                        <!-- Latest-Hindi -->
+                        <h2>Latest Hindi</h2>
+                        <section class="latest-hindi">
+                           
+                            
+                                <div class="responsive1">
+                                    <div class="gallery1">
+                                      
+                                        <img src="image/c2c6e31c490007ec8456512e3748bfcd.webp"  width="300" height="150">
+                                      
+                                      <div class="desc1">Onsin <br> AUG,2017</div>
+                                    </div>
+                                  </div>
+                                  
+                                  
+                                  <div class="responsive1">
+                                    <div class="gallery1">
+                                      
+                                        <img src="image/8e2baca54e3bc469cded395117124937.webp" alt="Forest" width="300" height="150">
+                                      
+                                        <div class="desc1">Onsin <br> AUG,2017</div>
+                                    </div>
+                                  </div>
+                                  
+                                  <div class="responsive1">
+                                    <div class="gallery1">
+                                      
+                                        <img src="image/078b9860b4d503c71e90b4aa7a03804a.webp" alt="Northern Lights" width="300" height="150">
+                                      
+                                        <div class="desc1">Onsin <br> AUG,2017</div>
+                                    </div>
+                                  </div>
+                                  
+                                  <div class="responsive1">
+                                    <div class="gallery1">
+                                      
+                                        <img src="image/07c7b69dd3bd8d9bd4f3de26a9d04767.webp" alt="Mountains" width="300" height="150">
+                                      
+                                        <div class="desc1">Onsin <br> AUG,2017</div>
+                                    </div>
+                                  </div>
+                                  <div class="responsive1">
+                                      <div class="gallery1">
+                                        
+                                          <img src="image/a1258e9305fd8b9a710df1c218ca55ce.webp" alt="Mountains" width="300" height="150">
+                                        
+                                          <div class="desc1">Onsin <br> AUG,2017</div>
+                                      </div>
+                                    </div>
+                                    <div class="responsive1">
+                                      <div class="gallery1">
+                                        
+                                          <img src="image/41737675ba8d59b605ae855775fb8ee4.webp" alt="Mountains" width="300" height="150">
+                                        
+                                          <div class="desc1">Onsin <br> AUG,2017</div>
+                                      </div>
+                                    
+                            </div>
+                </section>
+        </aside>
+                    
+    <!-- Second Aside Section -->
+    
+   
+
+    </main>
+
+     <!-- Queue Section  -->
+     <aside class="aside-section-2">
+        <!-- this is the section heading part. the heading will be static -->
+        <div class="heading">
+            <h1>Playlist</h1>
+            <h4>
+                <a href="#queue-option-box">Queue <i class="fas fa-chevron-circle-down"></i></a>
+            </h4>
+        </div>
+        <!-- this is the queue box which will be shown when the user clicks on the Queue button -->
+        <!-- it will have 3 options, playlists, favourite songs and Close button. it will close when one clicks on the close button. -->
+        <div class="queue-options" id="queue-option-box">
+            <p><a href style="color:#007bff; font-weight:bolder;">Playlists</a></p>
+            <hr>
+            <p><a href style="color:#007bff; font-weight:bolder;">Favourite songs</a></p>
+            <hr>
+            <p><a href="#" style="color:red; font-weight:bolder;">Close</a></p>
+        </div>
+        <!-- this is the content of the playlist. it will be dynamic. -->
+        <div class="playlist-content">
+            <!-- first playlist item -->
+            <div class=playlist-item>
+                <div class="left-content">
+                    <!-- index -->
+                    <div style="margin-right:4px; color: aqua;">
+                        01
+                    </div>
+                    <div class="coverer">
+                        <!-- coverer class is for those items which when hovered will show an effect -->
+                        <!-- in this effect, when the user hovers on the item, it will show black background -->
+                        <!-- with opacity value less than 1 and a play button icon at the center -->
+                        <img src="image/2e85f040182fbd2cea4942295a7eed2c.webp">
+        
+                    </div>
+                    <!-- name and author of the song -->
+                    <div>
+                        <div style="color: aqua;">
+                            Mirage
+                        </div>
+                        <p style="color: aqua;">
+                            Flume
+                        </p>
+                    </div>
+                </div>
+                <!-- like button -->
+                <div class="right-content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <!-- second playlist item -->
+            <div class=playlist-item>
+                <div class="left-content">
+                    <div style="margin-right:4px;color: aqua; font-family: sans-serif;">
+                        02
+                    </div>
+                    <div class="coverer">
+                        <img src="image/29e94fd66959d7b86ced86ee3fc2af2e.webp">
+                        
+                    </div>
+                    <div>
+                        <div style="color: aqua;">
+                            Worry Bout us
+                        </div>
+                        <p style="color: aqua;">
+                            Rosie Lowe
+                        </p>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <!-- third playlist item -->
+            <div class=playlist-item>
+                <div class="left-content">
+                    <div style="margin-right:4px;color: aqua;font-family: sans-serif;">
+                        03
+                    </div>
+                    <div class="coverer">
+                        <img src="image/22460962b9a1b98d54d8c1360ffc2320.png">
+                        
+                    </div>
+                    <div>
+                        <div style="color: aqua;">
+                            New Skin
+                        </div>
+                        <p style="color: aqua;">
+                            Flume
+                        </p>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <!-- fourth playlist item -->
+            <div class=playlist-item>
+                <div class="left-content">
+                    <div style="margin-right:4px; color: aqua;font-family: sans-serif;">
+                        04
+                    </div>
+                    <div class="coverer">
+                        <img src="image/211dcab09dcfadc863b40befa0332907.webp">
+                        
+                    </div>
+                    <div>
+                        <div style="color: aqua;">
+                            Worry Bout Us
+                        </div>
+                        <p style="color: aqua;">
+                            Rosie Lowe
+                        </p>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <!-- fifth playlist item -->
+            <div class=playlist-item>
+                <div class="left-content">
+                    <div style="margin-right:4px;color: aqua;font-family: sans-serif;">
+                        05
+                    </div>
+                    <div class="coverer">
+                        <img src="image/1c3f09ff9da11dca84498b3025297dc1.webp">
+                        
+                    </div>
+                    <div>
+                        <div style="color: aqua;">
+                            New Skin
+                        </div>
+                        <p style="color: aqua;">
+                            Flume
+                        </p>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <!-- sixth playlist item -->
+            <div class=playlist-item>
+                <div class="left-content">
+                    <div style="margin-right:4px;color: aqua;font-family: sans-serif;">
+                        06
+                    </div>
+                    <div class="coverer">
+                        <img src="image/0f85875882776e3cb5f9b2c51e0a84eb.webp">
+                        
+                    </div>
+                    <div>
+                        <div style="color: aqua;">
+                            Mirage
+                        </div>
+                        <p style="color: aqua;">
+                            Else
+                        </p>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <!-- seventh playlist item -->
+            <div class=playlist-item>
+                <div class="left-content">
+                    <div style="margin-right:4px; color: aqua;font-family: sans-serif;">
+                        07
+                    </div>
+                    <div class="coverer">
+                        <img src="image/0a10a84e30c25c17686fe9514b5cb692.png">
+                        
+                    </div>
+                    <div>
+                        <div style="color: aqua;">
+                            Mirage
+                        </div>
+                        <p style="color: aqua;">
+                            Flume
+                        </p>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <!-- eighth playlist item -->
+            <div class=playlist-item>
+                <div class="left-content">
+                    <div style="margin-right:4px;color: aqua;font-family: sans-serif;">
+                        08
+                    </div>
+                    <div class="coverer">
+                        <img src="image/07c7b69dd3bd8d9bd4f3de26a9d04767.webp">
+                      
+                    </div>
+                    <div>
+                        <div style="color: aqua; font-family: sans-serif;">
+                            Worry Bout Us
+                        </div>
+                        <p style="color: aqua;">
+                            Rosie Lowe
+                        </p>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <!-- ninth playlist item -->
+            <div class=playlist-item>
+                <div class="left-content">
+                    <div style="margin-right:4px; color: aqua;">
+                        09
+                    </div>
+                    <div class="coverer">
+                        <img src="image/07c7b69dd3bd8d9bd4f3de26a9d04767.webp">
+                        
+                    </div>
+                    <div>
+                        <div style="color: aqua; font-family: sans-serif;">
+                            New Skin
+                        </div>
+                        <p style="color: aqua;">
+                            Flume
+                        </p>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <!-- tenth playlist item -->
+            <div class=playlist-item>
+                <div class="left-content">
+                    <div style="margin-right:4px;color: aqua;font-family: sans-serif;">
+                        10
+                    </div>
+                    <div class="coverer">
+                        <img src="image/078b9860b4d503c71e90b4aa7a03804a.webp">
+                       
+                    </div>
+                    <div>
+                        <div style="color: aqua;">
+                            Worry Bout Us
+                        </div>
+                        <p style="color: aqua;">
+                            Flume
+                        </p>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <!-- eleventh playlist item -->
+            <div class=playlist-item>
+                <div class="left-content">
+                    <div style="margin-right:4px;color: aqua;font-family: sans-serif;">
+                        11
+                    </div>
+                    <div class="coverer">
+                        <img src="image/026941ad6f980292d315da9b4639fda1.webp">
+                        
+                    </div>
+                    <div>
+                        <div style="color: aqua;">
+                            New Skin
+                        </div>
+                        <p style="color: aqua;">
+                            Flume
+                        </p>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <!-- twelfth playlist item -->
+            <div class=playlist-item>
+                <div class="left-content">
+                    <div style="margin-right:4px; color: aqua;font-family: sans-serif;">
+                        12
+                    </div>
+                    <div class="coverer">
+                        <img src="image/060a3b0d42ff03a87fb73f4b2b9f4d5b.webp">
+                       
+                    </div>
+                    <div>
+                        <div style="color: aqua; font-family: sans-serif;">
+                            Mirage
+                        </div>
+                        <p style="color: aqua;">
+                            Else
+                        </p>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- This aside section only for last play song -->
+    <aside class="Last-play">
+        <div class="lastsong">
+            <center><h1>Last Play song</h1></center>
+            <img src="image/bj_800x600.gif">
+            <img src="image/image_processing20200210-24637-x1n69z.gif">
+            <img src="image/vynil_dribbble.gif">
+            <img src="image/image_processing20200122-2192-13e669x.gif">
+            <img src="image/drum-loop-full-dribbble.gif">
+            <img src="image/75f2f756cb5b87a803c2c370675fc993.webp">
+            <img src="image/78a27a2cfbdc96cf563e7f2bea3ae230.webp">
+
+        </div>
+        <div class="Adds">
+            <center><h1>Adds</h1>
+            <img src="image/comp_1.gif">
+            <h1>Song Studio</h1>
+            <h2>Design By Rahul Mishra</h2>
+        </center>
+        </div>
+    </aside>
+
+                    
+                        <footer>
+                            <div class="active-song-description">
+                                <!-- song image -->
+                                <div id="song-image">
+                                    <img src="image/0f85875882776e3cb5f9b2c51e0a84eb.webp">
+                                </div>
+                                <!-- song name and author -->
+                                <div class="song-desc">
+                                    <div style="color: rgb(251, 2, 2); font-family: sans-serif;">
+                                        Imagine by John
+                                    </div>
+                                    <div style="color: rgb(255, 30, 0); font-family: sans-serif;">
+                                        John Lenon
+                                    </div>
+                                    <!-- heart icon and ban icon -->
+                                </div>
+                                <div class="heart-and-ban-icon">
+                                    <span>
+                                        <i class="far fa-heart"></i>
+                                    </span>
+                                    <span>
+                                        <i class="fas fa-ban"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- these are the main player controls -->
+                            <div class="player">
+                                <div class="controls">
+                                    <div><i class="fas fa-random"></i></div>
+                                    <div><i class="fas fa-step-backward"></i></div>
+                                    <div><i class="fas fa-pause-circle"></i></div>
+                                    <div><i class="fas fa-step-forward"></i></div>
+                                    <div><i class="fas fa-redo"></i></div>
+                                </div>
+                                <!-- this is the slider -->
+                                <div id="slider">
+                                    <!-- current time -->
+                                    <div class="time">
+                                        1:39
+                                    </div>
+                                    <div class="slidecontainer">
+                                        <input type="range" min="0" max="100" value="0" class="slider" id="myRange">
+                                    </div>
+                                    <!-- total time -->
+                                    <div class="time">
+                                        4:44
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- other icons including the volume slider and all -->
+                            <div class="extras">
+                                <div>
+                                    <i class="fas fa-list-ul"></i>
+                                </div>
+                                <div>
+                                    <i class="fas fa-laptop"></i>
+                                </div>
+                                <div>
+                                    <i class="fas fa-volume-up"></i>
+                                </div>
+                                <div class="slidecontainer" style="width:30%;">
+                                    <input type="range" min="0" max="100" value="0" class="slider" id="myRange" style="margin-top:0px;">
+                                </div>
+                                <div>
+                                    <i class="fas fa-expand-alt"></i>
+                                </div>
+                            </div>
+                        </footer>
+            
+                        <!-- Javascript File for the floating image -->
+            <script src="JS/index.js"></script>
+            
+        </body>
+    </html>

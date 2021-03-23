@@ -1,0 +1,1248 @@
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
+body{
+    background: linear-gradient(45deg, #ff0901,#4209fa,#DD2A7B,#8134AF,#515BD4);
+
+    width: auto;
+    height: auto;
+
+}
+/* Main Section */
+main{
+    width: 70%;
+    /* display: inline-block; */
+
+  
+    
+    /* display: none; */
+   
+}
+main::-webkit-scrollbar {
+  /* This is the magic bit for WebKit */
+  display: none;
+}
+/* Header section */
+/* /////////////////// */
+ .aside {
+	display: inline-block;
+	overflow:hidden;
+ 
+}
+
+.aside-section-2
+{
+  vertical-align: top;
+  overflow: hidden;
+ float: right;
+ width: 30%;
+  /* padding-left: 200px; */
+  
+
+
+}
+.aside-section1{
+  float: left;
+  
+  
+  
+}
+
+
+
+
+
+/* ///////////////////////// */
+
+/*  */
+/* all the divs inside the navigation bar should be placed side by side*/
+.navigation-bar > div {
+	display: inline-block;
+}
+/* animation for the website logo */
+@keyframes rotating {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.navigation-bar {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 5%;
+    padding-right: 5%;
+    transition: all ease-in-out 1s;
+
+}
+
+
+
+/* website logo image */
+.website-logo img {
+	height: 50px;
+	width: 50px;
+	border-radius: 100%;
+	animation-name: rotating;
+	animation-timing-function: ease-in-out;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+/* website function */
+.website-name h4 {
+	color: rgb(80, 220, 255);
+}
+/* website title and general description */
+.title-combo > div {
+	vertical-align: middle;
+	display: inline-block;
+}
+/* animation for favoutites text */
+@keyframes flexible {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotateY(360deg);
+	}
+	75% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scaleX(1);
+	}
+}
+/* favourites text */
+.favs {
+	animation-name: flexible;
+	animation-timing-function: ease-in-out;
+	animation-duration: 2s;
+	perspective: 10000px;
+	transform-style: preserve-3d;
+	animation-iteration-count: infinite;
+}
+/* search bar */
+.search-bar {
+	width: 20%;
+	position: relative;
+}
+/* changing the default style of the input bar */
+.search-bar input {
+	width: 100%;
+	font-size: 16px;
+	text-decoration: none;
+	border-radius: 18px;
+	border: none;
+	padding: 5px;
+	font-weight: 500;
+	text-align: center;
+	transition: all ease-in-out 0.1s;
+}
+/* search icon for input bar */
+.search-ico {
+	color: rgba(0, 0, 0, 0.5);
+}
+/* mic icon for input */
+.mic-ico {
+	color: rgba(0, 0, 0, 0.5);
+}
+/* search icon */
+.search-bar > div:nth-child(1) {
+	display: inline-block;
+	position: absolute;
+	width: min-content;
+	left: 5%;
+	top: 10%;
+	transition: all ease-in-out 0.1s;
+}
+/* mic icon */
+.search-bar > div:nth-child(3) {
+	display: inline-block;
+	position: absolute;
+	width: min-content;
+	right: 0%;
+	top: 10%;
+	transition: all ease-in-out 0.1s;
+}
+/* when the user clicks on the search bar, there should be no blue outlining */
+input:focus {
+	outline: none;
+}
+/* animation for bell image */
+@keyframes ringing_bell {
+	0% {
+		transform: rotate(-15deg);
+	}
+	50% {
+		transform: rotate(15deg);
+	}
+	100% {
+		transform: rotate(-15deg);
+	}
+}
+/* notification bell image */
+.notification-bell img {
+	width: 30px;
+	height: 30px;
+	animation-name: ringing_bell;
+	animation-duration: 0.5s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+/* profile picture of the user */
+.profile-picture img {
+	width: 45px;
+	height: 45px;
+	border-radius: 100%;
+}
+/* navigation bar is completed here */
+.website-name h1{
+    color: aqua;
+}
+
+.favs h4{
+    color: aqua;
+    left: 50px;
+}
+/*  */
+
+/* Floating Image side */
+#images-section{
+    padding: 10px 10px 10px 10px;
+}
+* {
+    box-sizing: border-box;
+  }
+
+input[type=radio] {
+    display: none;
+  }
+  
+  .card {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: transform .4s ease;
+    cursor: pointer;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 800px;
+    max-height: 600px;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cards {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+  }
+  
+  img {
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  #item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-2 {
+    transform: translatex(-40%) scale(.8);
+    opacity: .4;
+    z-index: 0;
+  }
+  
+  #item-1:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-3, #item-3:checked ~ .cards #song-1 {
+    transform: translatex(40%) scale(.8);
+    opacity: .4;
+    z-index: 0;
+  }
+  
+  #item-1:checked ~ .cards #song-1, #item-2:checked ~ .cards #song-2, #item-3:checked ~ .cards #song-3 {
+    transform: translatex(0) scale(1);
+    opacity: 1;
+    z-index: 1;
+    
+    
+  }
+  .cards img {
+    box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+  }
+  
+  .player {
+    background-color: #fff;
+    border-radius: 8px;
+    min-width: 320px;
+    padding: 16px 10px;
+  }
+  
+  .upper-part {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    height: 36px;
+    overflow: hidden;
+  }
+  
+  
+  
+  .song-info {
+    width: calc(100% - 32px);
+    display: block;
+  }
+  
+  .song-info .title {
+    color: #403d40;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  
+  .sub-line {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .subtitle, .time {
+    font-size: 12px;
+    line-height: 16px;
+    color: #c6c5c6;
+  }
+  
+  .time {
+    font-size: 12px;
+    line-height: 16px;
+    color: #a5a5a5;
+    font-weight: 500;
+    margin-left: auto;
+  }
+  
+  .progress-bar {
+    height: 3px;
+    width: 100%;
+    background-color: #e9efff;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    display: block;
+    position: relative;
+    width: 60%;
+    height: 100%;
+    background-color: #2992dc;
+    border-radius: 6px;
+  }
+  
+  .info-area {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 30px;
+    transition: transform .4s ease-in;
+  }
+  
+  #item-2:checked ~ .player #test {
+    transform: translateY(0);
+  }
+  
+  #item-2:checked ~ .player #test  {
+    transform: translateY(-40px);
+  }
+  
+  #item-3:checked ~ .player #test  {
+    transform: translateY(-80px);
+  }
+    /* background-color: #dcdcdc; 
+/* Latest Release Section */
+#relesae-section{
+    padding-top: 390px;
+}
+ .releases h2
+{
+    color: #dcdcdc;
+    font-weight: 900;
+    padding-left: 8px;
+    font-family: 'Bebas Neue', cursive;
+}
+.Block-modification{
+    display: flex;
+
+}
+.Block1{
+    height: 120px;
+    width: 120px;
+    padding-bottom: 20px;
+    /* display: inline-block;     */
+
+}
+
+.Block2{
+    height: 120px;
+    width: 120px;
+    padding-bottom: 20px;
+    
+}
+
+.Block3{
+    height: 120px;
+    width: 120px;
+    padding-top: 20px;
+    
+}
+
+.Block4{
+    height: 120px;
+    width: 120px;
+    padding-top: 20px;
+}
+/* Styling the text style */
+.text-style p {
+    color: #dcdcdc;
+
+}
+/* Stylinig the block's image */
+.Block2 img{
+    height: 134px;
+    width: 134px;
+    position: absolute;
+    left: 40%;
+}
+.Block4 img{
+    height: 134px;
+    width: 134px;
+    position: absolute;
+    left: 40%;
+}
+
+.Block1 img{
+    height: 134px;
+    width: 134px;
+    position: absolute;
+   
+}
+.Block3 img{
+    height: 134px;
+    width: 134px;
+    position: absolute;
+}
+
+/* Block1 text styling  */
+
+.Block1{
+    display: flex;
+}
+.Block1 h2{
+    color: aqua;
+    padding-left: 150%;
+}
+.Block1 h4{
+    color: aqua;
+    padding-top: 40%;
+
+}
+.inside-block1 ul li p{
+    color: aqua;
+    padding-left: 150px;
+}
+
+.Block1 i{
+    padding-left: 300%;
+    color: aqua;
+
+}
+.Block1-helper{
+    display:flex;
+
+}
+.Block1-helper p {
+    color: aqua;
+    padding-left: 300%;
+}
+/* Block2  text styling */
+.Block2{
+    display: flex;
+}
+
+.inside-block2 ul li p{
+    color: aqua;
+    padding-left: 550px;
+}
+
+.Block2 i{
+    padding-left: 300%;
+    color: aqua;
+
+}
+.Block2-helper{
+    display:flex;
+
+}
+.Block2-helper p {
+    color: aqua;
+    padding-left: 300%;
+}
+
+/* Block3 text style */
+.Block3{
+    display: flex;
+}
+.Block1 h2{
+    color: aqua;
+    padding-left: 150%;
+}
+.Block1 h4{
+    color: aqua;
+    padding-top: 40%;
+
+}
+.inside-block1 ul li p{
+    color: aqua;
+    padding-left: 150px;
+}
+
+.Block3 i{
+    padding-left: 300%;
+    color: aqua;
+
+}
+.Block1-helper{
+    display:flex;
+
+}
+.Block1-helper p {
+    color: aqua;
+    padding-left: 300%;
+}
+
+/* Styling for Block4 text */
+.Block4{
+    display: flex;
+}
+
+.inside-block2 ul li p{
+    color: aqua;
+    padding-left: 550px;
+}
+
+.Block4 i{
+    padding-left: 300%;
+    color: aqua;
+
+}
+.Block2-helper{
+    display:flex;
+
+}
+.Block2-helper p {
+    color: aqua;
+    padding-left: 300%;
+}
+
+
+/* Popular Artist Section */
+.Popular-artist{
+    padding-top: 2%;
+    display:flex
+    
+    /* flex-direction: column; */
+}
+
+ h2{
+     padding-top: 7%;
+    color:#ccc;
+    font-family: 'Bebas Neue', cursive;
+}
+div.gallery {
+    border: 1px  #ccc;
+  }
+  
+  
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius:50%;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+    color: rgb(251, 251, 251);
+    font-family: 'Redressed', cursive;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+  
+  
+  
+
+
+/* List of song item  */
+.List-songitem{
+    padding-top:20px;
+    background-color: rgb(10, 10, 85);
+    display: flex;
+    flex-grow: inherit;
+}
+.list-item img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flexbox;
+}
+/* List of item with image */
+/* ///////////////////////// */
+#item1{
+    color: rgb(41, 255, 4);
+    font-size: 20px;
+    position: absolute;
+    top: 210%;
+    left: 5%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+}
+#item2{
+    color: rgb(41, 255, 4);
+    font-size: 20px;
+    position: absolute;
+    top: 210%;
+    left: 13%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+} #item3{
+    color: rgb(41, 255, 4);
+    font-size: 20px;
+    position: absolute;
+    top: 210%;
+    left: 22%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+} #item4{
+    color: rgb(41, 255, 4);
+    font-size: 20px;
+    position: absolute;
+    top: 210%;
+    left: 32%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+} #item5{
+    color: rgb(41, 255, 4);
+    font-size: 20px;
+    position: absolute;
+    top: 210%;
+    left: 42%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+} #item6{
+    color: rgb(41, 255, 4);
+    font-size: 20px;
+    position: absolute;
+    top: 210%;
+    left: 51%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+} #item7{
+    color: rgb(41, 255, 4);
+    font-size: 20px;
+    position: absolute;
+    top: 210%;
+    left: 60%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+}
+/* /////////////////////////////////// */
+/* Type of song */
+h3{
+    color: #ccc;
+    padding-top: 3%;
+}
+.type-song{
+    padding-top: 10%;
+    /* display: flex; */
+}
+.song-mode{
+    display: flex;
+}
+.song-mode img{
+    height: 150px;
+    width: 250px;
+    padding-left: 10px;
+}
+
+ .text-part span {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 245%;
+    left: 10%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+}
+.text-part1 span {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 245%;
+    left: 28%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+}
+
+.text-part2 span {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 245%;
+    left: 47%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* Hover image */
+.text-part  img:hover {
+   border: 5px solid rgb(102, 255, 0);
+}
+.text-part  img:focus{
+    border: none! important;
+}
+
+.text-part1  img:hover {
+    border: 5px solid rgb(102, 255, 0);
+ }
+ .text-part1  img:focus{
+     border: none! important;
+ }
+ .text-part2  img:hover {
+    border: 5px solid rgb(102, 255, 0);
+ }
+ .text-part2  img:focus{
+     border: none! important;
+ }
+
+
+/* Latest-english */
+.latest-english{
+    padding-top: 40px;
+    display: flex;
+}
+.latest-english h2{
+    color: aqua;
+    padding-left: 10px;
+    font-family: 'Bebas Neue', cursive;
+}
+.latest-english-song img{
+    padding-top: 50px;
+    height: 180px;
+    width: 180px;
+    
+}
+/* Latest-Hindi */
+
+.latest-hindi{
+    padding-top: 40px;
+    display: flex;
+}
+.latest-hindi h3{
+    color: aqua;
+    padding-left: 10px;
+    font-family: 'Bebas Neue', cursive;
+}
+.latest-hindi-song img{
+    padding-top: 50px;
+    height: 180px;
+    width: 180px; 
+}
+
+/* Queue Section */
+.queue{
+    padding-top: 30px;
+    display: inline-block;
+}
+
+.queue-section p{
+ color: aqua;
+ text-decoration: solid;
+ padding-left: 10px;
+ display: inline-block;
+ margin: 5%;
+
+}
+
+.song-collection div{
+    padding-top: 5%;
+   display: flex; 
+   flex-direction:row;
+   
+}
+.song-collection img{
+    height: 80px;
+    width: 80px;
+    padding-top: 30px;
+    
+}
+.song-collection p{
+    color: #dcdcdc;
+    padding-top: 30px;
+    padding-right: 20px;
+}
+.song-collection h4{
+    color: aqua;
+    list-style-type: none;
+    
+    
+}
+ul li{
+    list-style-type: none;
+}
+.song-collection h5{
+    color: aqua;
+    /* padding-left: 10px; */
+    
+}
+.song-collection i{
+    color: red;
+    padding: 50px;
+    padding-left: 40px;
+}
+
+/* Aside section */
+/* ASIDE SECTION 2 */
+.heading {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: baseline;
+  /* vertical-align: top; */
+	margin-bottom: 12%;
+}
+/* heading for the second  aside section */
+.heading h4 a {
+	text-decoration: none;
+	color: greenyellow;
+}
+/* these are the properties for the queue options box. the queue options box will be visible when one clicks on the queue button */
+.queue-options {
+	position: fixed;
+	right: 4%;
+	top: 14%;
+	background-color: #f8f9fa;
+	width: 10%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 1%;
+	box-sizing: border-box;
+	overflow: hidden;
+	z-index: 2; /* to cover the heart icon */
+	opacity: 0;
+	transform: scale(0);
+	transition: all ease-in-out 0.25s;
+}
+/* when the queue option box becomes target */
+#queue-option-box:target {
+	opacity: 1;
+	transform: scale(1);
+}
+.queue-options {
+	color: black;
+}
+.queue-options p {
+	text-align: center;
+}
+.queue-options p a {
+	text-decoration: none;
+}
+/* horizontal line in queue options box */
+hr {
+	width: 90%;
+	color: black;
+}
+
+/* playlist content */
+.playlist-content {
+	width: 100%;
+	height: 75vh;
+	/*     margin-top:4vh; */
+	display: flex;
+	flex-direction: column;
+	overflow: scroll;
+	cursor: pointer;
+}
+/* playlist content container scroll bar */
+.playlist-content::-webkit-scrollbar {
+	display: none;
+}
+/* left content contains the image, index and name of the song */
+.left-content {
+	display: flex;
+	height: 100%;
+	width: 70%;
+	flex-direction: row;
+	flex-wrap: no-wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.left-content > div:nth-child(3) {
+	margin-left: 12px;
+	width: 50%;
+	word-wrap: break-word;
+}
+/* right content contains the heart icon */
+.right-content {
+	position: relative;
+	bottom: 62%;
+	left: 90%;
+	width: min-content;
+	height: 20px;
+	color: white;
+	font-size: 20px;
+}
+.right-content i {
+	transition: all ease-in-out 0.1s;
+}
+.right-content i:hover {
+	color: red;
+}
+/* class for a partilcular item in playlist */
+.playlist-item {
+	width: 90%;
+	height: auto;
+	padding: 0px 1%;
+	box-sizing: border-box;
+	margin: 1%;
+	/* transition: all ease-in-out 0.1s; */
+}
+/* animation for glowing heart in each of the playlist items */
+@keyframes glowing-heart {
+	0% {
+		color: yellow;
+	}
+	50% {
+		color: orangered;
+	}
+	100% {
+		color: red;
+	}
+}
+/* hover effect on heart */
+.playlist-item:hover .fa-heart {
+	animation-name: glowing-heart;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-duration: 1s;
+}
+/* playlist items hovering effect */
+.playlist-item:hover {
+	box-shadow: 0px 0px 2px 1px white;
+}
+/* playlist item image */
+.playlist-item img {
+	width: 80px;
+	height: 80px;
+}
+/* this will cover the playlist image. this can be called as a container for half of the items in the left part */
+.coverer {
+	width: 80px;
+	height: 80px;
+}
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+footer {
+	position: fixed;
+	bottom: 1px;
+	width: 101%;
+	height: 65px;
+	left: -.43%;
+	background-color: #48ff00;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: center;
+	flex-wrap: nowrap;
+	padding: 0px 3%;
+	box-sizing: border-box;
+	z-index: 6;
+    margin: 0;
+}
+/* footer is divided into 3 parts */
+/* 1. first part of the footer */
+.active-song-description {
+	/* border:1px solid white; */
+	height: 90%;
+	width: 25%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+/* the current song which is being played, this is the image container for that. */
+#song-image {
+	width: 50px;
+	height: 50px;
+	min-width: 50px;
+	min-height: 50px;
+}
+/* current song image */
+#song-image img {
+	width: 100%;
+	height: 100%;
+}
+/* heart and ban icon */
+.heart-and-ban-icon {
+	height: 100%;
+	padding-top: 4%;
+}
+/* song decscription */
+.song-desc {
+	margin-right: 1%;
+	margin-left: 1%;
+}
+/* song name */
+.song-desc div:nth-child(1) {
+	font-size: 14px;
+}
+/* song author */
+.song-desc div:nth-child(2) {
+	font-size: 12px;
+}
+
+/* 2. Second part of the footer*/
+.player {
+	width: 45%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: nowrap;
+}
+/* controls is the container for all the center controls of the player */
+.controls {
+	width: 40%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 20px;
+}
+/* this is the song-duration slider */
+#slider {
+	width: 100%;
+	font-size: 12px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center;
+	margin-top: 5px;
+}
+/* ////////// */
+.time {
+	margin: 0px 10px;
+}
+
+/* adjusting the slider for better visuals */
+.slidecontainer {
+	width: 100%;
+}
+/* for audio and main center player */
+.slider {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 5px;
+	background: #d3d3d3;
+	outline: none;
+	opacity: 0.5;
+	-webkit-transition: 0.2s;
+	transition: opacity 0.2s;
+}
+/* hover effect for the slider */
+.slider:hover {
+	opacity: 1;
+}
+/* these are for adjusting the dimensions and default styling of the long-slider */
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 17px;
+	height: 17px;
+	border-radius: 50%;
+	background: #007bff;
+	cursor: pointer;
+}
+/* this is the circular thumb, which can be moved across the div */
+.slider::-moz-range-thumb {
+	width: 25px;
+	height: 25px;
+	background: #4caf50;
+	cursor: pointer;
+}
+
+/* third part of the footer */
+/* this contains the extra icons and slider for volume */
+/* this is also a container */
+.extras {
+	width: 20%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+/* ////////////////////////////////// */
+/* Latest english and hindi  */
+div.gallery1 {
+    border: 1px  #ccc;
+  }
+  
+  
+  
+  div.gallery1 img {
+    width: 100%;
+    height: auto;
+    border-radius:5%;
+  }
+  
+  div.desc1 {
+    padding: 15px;
+    text-align: center;
+    color: rgb(251, 251, 251);
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .responsive1 {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .responsive1 {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive1 {
+      width: 100%;
+    }
+  }
+  
+/* ////////////////////////////// */
+
+.heading h1{
+  color: aqua;
+}
+
+/* ////////////////// */
+
+
+.Last-play{
+  /* float: right; */
+  padding-top: 4%;
+
+}
+.lastsong{
+  padding-top: 4%;
+}
+.lastsong h1{
+ text-align: center;
+ color: #f3ecec;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.lastsong img{
+ padding-left: 5%;
+  width: 20%;
+  height: 180%;
+  
+}
+
+.lastsong img {
+  border: solid 1px transparent;
+  
+}
+.lastsong img:hover {
+  border-color: rgb(209, 255, 6);
+}
+
+.Adds img{
+  padding-left: 2%;
+  width: 305px;
+  height: 380%;
+
+}
+.Adds h1{
+  color: rgb(248, 252, 252);
+  font-family: sans-serif;
+}
