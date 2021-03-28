@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
 body{
-    background: linear-gradient(45deg, #ff0901,#4209fa,#DD2A7B,#8134AF,#515BD4);
+    background: linear-gradient(45deg, #ff0901,#3c00ff,#fa0171,#510280,#515BD4);
 
     width: auto;
     height: auto;
@@ -67,6 +67,7 @@ main::-webkit-scrollbar {
 	}
 }
 .navigation-bar {
+  background:linear-gradient(45deg,blue,red);
     height: auto;
     width: auto;
     display: flex;
@@ -78,7 +79,13 @@ main::-webkit-scrollbar {
     padding-left: 5%;
     padding-right: 5%;
     transition: all ease-in-out 1s;
+    /* border-radius: %; */
+    margin: 0px;
 
+    /* For sticky Position */
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 
@@ -372,6 +379,7 @@ input[type=radio] {
 /* Latest Release Section */
 #relesae-section{
     padding-top: 390px;
+  
 }
  .releases h2
 {
@@ -619,7 +627,12 @@ div.gallery {
     padding-top:20px;
     background-color: rgb(10, 10, 85);
     display: flex;
-    flex-grow: inherit;
+    
+}
+.list-item{
+  display: flex;
+  flex-direction: row;
+    justify-content: flex-start
 }
 .list-item img{
     width: 120px;
@@ -629,90 +642,20 @@ div.gallery {
 }
 /* List of item with image */
 /* ///////////////////////// */
-#item1{
-    color: rgb(41, 255, 4);
-    font-size: 20px;
-    position: absolute;
-    top: 210%;
-    left: 5%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-family: 'Anton', sans-serif;
+
+.item_value {
+  color: white;
+  font: bold 24px/45px Helvetica, Sans-Serif;
+  margin: auto;
+  padding: 10%;
 }
-#item2{
-    color: rgb(41, 255, 4);
-    font-size: 20px;
-    position: absolute;
-    top: 210%;
-    left: 13%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-family: 'Anton', sans-serif;
-} #item3{
-    color: rgb(41, 255, 4);
-    font-size: 20px;
-    position: absolute;
-    top: 210%;
-    left: 22%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-family: 'Anton', sans-serif;
-} #item4{
-    color: rgb(41, 255, 4);
-    font-size: 20px;
-    position: absolute;
-    top: 210%;
-    left: 32%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-family: 'Anton', sans-serif;
-} #item5{
-    color: rgb(41, 255, 4);
-    font-size: 20px;
-    position: absolute;
-    top: 210%;
-    left: 42%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-family: 'Anton', sans-serif;
-} #item6{
-    color: rgb(41, 255, 4);
-    font-size: 20px;
-    position: absolute;
-    top: 210%;
-    left: 51%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-family: 'Anton', sans-serif;
-} #item7{
-    color: rgb(41, 255, 4);
-    font-size: 20px;
-    position: absolute;
-    top: 210%;
-    left: 60%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-family: 'Anton', sans-serif;
-}
+
 /* /////////////////////////////////// */
 /* Type of song */
 h3{
-    color: #ccc;
+    color: rgb(255, 104, 104);
     padding-top: 3%;
+    font-family: sans-serif;
 }
 .type-song{
     padding-top: 10%;
@@ -727,41 +670,59 @@ h3{
     padding-left: 10px;
 }
 
- .text-part span {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 245%;
-    left: 10%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-    
+.text-part{
+  border:5px solid rgb(11, 39, 82);
+  border-radius: 8%;
+  margin: 6px;
 }
-.text-part1 span {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 245%;
-    left: 28%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-    
+.text-part1{
+  border:5px solid rgb(11, 39, 82);
+  border-radius: 8%;
+  margin: 6px;
+}
+.text-part2{
+  border:5px solid rgb(11, 39, 82);
+  border-radius: 8%;
+  margin: 6px;
 }
 
-.text-part2 span {
+ .text-part h2 {
     color: white;
     font-size: 20px;
-    position: absolute;
-    top: 245%;
-    left: 47%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    
+    
     text-align: center;
+    animation-name: flexible;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    perspective: 10000px;
+    transform-style: preserve-3d;
+    animation-iteration-count: infinite;
+    
+}
+.text-part1 h2 {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    animation-name: flexible;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    perspective: 10000px;
+    transform-style: preserve-3d;
+    animation-iteration-count: infinite;
+
+}
+
+.text-part2 h2 {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    animation-name: flexible;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    perspective: 10000px;
+    transform-style: preserve-3d;
+    animation-iteration-count: infinite;
 }
 
 /* Hover image */
@@ -818,6 +779,22 @@ h3{
     height: 180px;
     width: 180px; 
 }
+
+/* ///////////////////////// */
+/* Responsive the Latest english song */
+@media only screen and (max-width: 400px) {
+  .latest-english {
+    max-width: 250px;
+  }
+}
+/* Responsive the latest-hindi */
+@media only screen and (max-width: 400px) {
+  .latest-hindi {
+    max-width: 250px;
+  }
+}
+
+/* /////////////////////////////// */
 
 /* Queue Section */
 .queue{
@@ -1022,7 +999,7 @@ footer {
 	width: 101%;
 	height: 65px;
 	left: -.43%;
-	background-color: #48ff00;
+	background-color: #0b1d58;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -1233,7 +1210,7 @@ div.gallery1 {
   
 }
 .lastsong img:hover {
-  border-color: rgb(209, 255, 6);
+  border-color: rgb(255, 141, 141);
 }
 
 .Adds img{
@@ -1245,4 +1222,31 @@ div.gallery1 {
 .Adds h1{
   color: rgb(248, 252, 252);
   font-family: sans-serif;
+}
+
+
+/* Release image hover */
+.Block1 img:hover{
+  background-color: rgb(255, 71, 101);
+}
+.Block1 img{
+  border: solid 4px transparent;
+}
+.Block2 img:hover{
+  background-color: rgb(255, 71, 101);
+}
+.Block2 img{
+  border: solid 4px transparent;
+}
+.Block3 img:hover{
+  background-color: rgb(255, 71, 101);
+}
+.Block3 img{
+  border: solid 4px transparent;
+}
+.Block4 img:hover{
+  background-color: rgb(255, 71, 101);
+}
+.Block4 img{
+  border: solid 4px transparent;
 }
