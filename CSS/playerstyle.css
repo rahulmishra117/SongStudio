@@ -1,18 +1,45 @@
-body{
-    background: linear-gradient(45deg, red, blue);
-    width: auto;
-    height: auto;
 
+body {
+	/* background-image: var(--background-image); */
+	/* background: linear-gradient(45deg, #ff0901,#3c00ff,#fa0171,#510280,#515BD4,rgb(255, 13, 142)); */
+	background-image: url(https://cdn.dribbble.com/users/1207383/screenshots/15296110/media/56d002bccf3679421730573eb4408be8.png?compress=1&resize=800x600);
+/* 	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat; */
+	margin: 0px;
+	font-family: "Segoe UI", Arial, sans-serif;
+	color: rgb(248, 254, 255);
 }
-/* Main Section */
-main{
-    width: 70%;
-    display: inline-block;
+/* removing all the styles from the links and formatting them white */
+a {
+	text-decoration: none;
+	color: rgb(6, 228, 248);
 }
-/* Header section */
-
-
-/*  */
+/* removing margin for all the textual elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0px;
+}
+/* top navigation bar */
+.navigation-bar {
+	height: auto;
+	width: auto;
+	background: linear-gradient(45deg, rgb(255, 0, 0), rgba(64, 27, 231, 0));
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	box-sizing: border-box;
+	padding-left: 5%;
+	padding-right: 5%;
+	transition: all ease-in-out 1s; /* when the navbar loads, every property transits for 1s */
+}
 /* all the divs inside the navigation bar should be placed side by side*/
 .navigation-bar > div {
 	display: inline-block;
@@ -26,26 +53,6 @@ main{
 		transform: rotate(360deg);
 	}
 }
-.navigation-bar {
-   background: linear-gradient(45deg,red,blue);
-	height: auto;
-    width: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-    padding-left: 5%;
-    padding-right: 5%;
-    transition: all ease-in-out 1s;
-	position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-
-
 /* website logo image */
 .website-logo img {
 	height: 50px;
@@ -55,10 +62,6 @@ main{
 	animation-timing-function: ease-in-out;
 	animation-duration: 1s;
 	animation-iteration-count: infinite;
-}
-/* website function */
-.website-name h4 {
-	color: rgb(80, 220, 255);
 }
 /* website title and general description */
 .title-combo > div {
@@ -89,6 +92,7 @@ main{
 	transform-style: preserve-3d;
 	animation-iteration-count: infinite;
 }
+
 /* search bar */
 .search-bar {
 	width: 20%;
@@ -163,191 +167,316 @@ input:focus {
 	height: 45px;
 	border-radius: 100%;
 }
-.website-name h1 ,h4{
-    color: aqua;
+/* navigation bar is completed here */
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* main */
+main {
+	width: 100%;
+	padding: 0% 3%;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	transition: all ease-in-out 1s;
 }
-
-/* Artist Playlist section */
-#Playlist{
-    padding-top: 5%;
+/* there are two aside sections both of them will have this class 
+(I have taken care of the re-usability of the classes and removed redundancy) */
+.aside {
+	display: inline-block;
+	overflow: hidden;
 }
-* { box-sizing: border-box; }
-
-#content {
-  
-  height: 350px;
-  width: 780px;
-  padding: 0.5rem;
-  display: flex;
-}
-
-#left,
-#right {
-  background-color: rgba(10, 10, 10, 0.5);
-  
-  padding: 0.5rem;
-  flex-grow: 1;
-  color: #fff;
-  border-radius: 10%;
-}
-#left img{
-    height: 320px;
-    width: 350px;
-	border-radius: 50%;
-}
-.about1{
-    width:380px;
-    height: 160px;
-  
-  }
-  .about2{
-    width:380px;
-    height:160px;
-  
-  }
-  
-#different-song-list{
-    padding-top: 10%;
-
-}
-
-
-/* differentPlaylist  */
-.song-list{
-    display: inline-block;
-    margin: .5%;
-  
-  }
-  
-  .song-list {
-    background: hsl(254, 87%, 18%);
-    height: 60px;
-    width: 82%;
-  }
-
- /* Aside section */
- aside{
-    display: inline-block;
-    width: 21%;
-    vertical-align: top;
-    margin-left: 4%;
-    position:fixed;
+/* section one of the main part */
+.section-1 {
+	width: 70%;
+	height: 85vh;
 	overflow: scroll;
 }
-.queue{
-    padding-top: 30px;
-    display: inline-block;
+/* overflow should be scrollable but the scroll bar should be hidden*/
+.section-1::-webkit-scrollbar {
+	display: none;
+}
+/* section 2 of the main part */
+.section-2 {
+	width: 28%;
+	height: 85vh;
+	z-index: 2;
 }
 
-.queue-section h1{
- color: aqua;
- text-decoration: solid;
- padding-left: 10px;
- display: inline-block;
- margin: 5%;
-
-}
-
-.song-collection div{
-    padding-top: 5%;
-   display: flex; 
-   flex-direction:row;
-   
-}
-.song-collection img{
-    height: 80px;
-    width: 80px;
-    padding-top: 30px;
-    
-}
-.song-collection p{
-    color: #dcdcdc;
-    padding-top: 30px;
-    padding-right: 20px;
-}
-.song-collection h4{
-    color: aqua;
-    list-style-type: none;
-    
-    
-}
-ul li{
-    list-style-type: none;
-}
-.song-collection h5{
-    color: aqua;
-    /* padding-left: 10px; */
-    
-}
-.song-collection i{
-    color: red;
-    padding: 50px;
-    padding-left: 40px;
-}
-
-
-/* Inside song-list image */
-.song-list{
+/* aside section 1 */
+/* jumbotron */
+.jumbotron {
+	height: 20vw;
+	width: 100%;
+	margin-top: 12px;
+	box-sizing: border-box;
 	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color: rgb(26, 114, 214);
+	margin-bottom: 40px;
+	position: relative;
 }
-.song-list img{
-	height: 60px;
+/* image insider jumbotron */
+.jumbotron-image {
+	height: 20vw;
+	width: 20vw;
+	background-image: url("../image/comp_1.gif");
+		
+	background-size: cover;
+}
+/* right part of the jumbotron */
+.jumbotron-detail {
+	width: 67%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	box-sizing: border-box;
+	padding-right: 12px;
+}
+/* descriptive part contains the descripton of the song and action part contains the follow and play buttons */
+.descriptive-part,
+.action-part {
+	width: 100%;
+	height: max-content;
+}
+/* song name and followers */
+.song-name-main,
+.followers {
+	display: inline-block;
+}
+/* song name heading properties */
+.song-name-main h1 {
+	font-size: 2vw;
+}
+/* follower count */
+.followers {
+	position: absolute;
+	right: 0%;
+	top: 5%;
+}
+/* self explanatory */
+.followers,
+.author {
+	font-size: 1.5vw;
+}
+/* description of the jumbotron */
+.desc {
+	font-size: 1vw;
+}
+/* action part */
+/* .action-part {
+	padding-top: 2vw;
+} */
+.action-part p {
+	font-size: 1vw;
+}
+.btns > button {
+	border: 0px;
+	height: 3vw;
+	width: 10vw;
+	color: white;
+	font-size: 1.2vw;
+}
+/* play button */
+.btns > button:nth-child(1) {
+	background-image: linear-gradient(-19deg, red 0%, blue 100%);
+}
+/* follow button */
+.btns > button:nth-child(2) {
+	background-color: transparent;
+}
+/* particular item in the playlist */
+.playlist-item {
+	/* height:60px;
+    width:100%; */
+	height: 8vh;
+
+	box-sizing: border-box;
+	background-color: rgb(253, 5, 5);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 12px;
+	/* transition: all ease-in-out 0.1s; */
+}
+/* playlist item hovering effects */
+.playlist-item:hover {
+	background-color: rgb(241, 7, 190)
+}
+/* left part if the playlist item */
+.left {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	width: 30%;
+	height: 100%;
+	padding: 0% 1%;
+}
+/* center part of the playlist item which contains the duration length of the song */
+.center {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: min-content;
+	height: 100%;
+}
+/* right part of the playlist item, which contains icons */
+.right {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 100%;
+	padding-right: 2%;
+}/* now adjusting the contents of left, center and right parts */
+.left > div:nth-child(2) {
+	height: 80%;
+	min-width: 50px;
+	max-width: 50px;
+	margin: 0px 12% 0px 12%;
+	position: relative;
+}
+.left > div:nth-child(2) img {
+	width: 100%;
+	height: 100%;
+}
+.left > div:nth-child(3) p {
+	color: rgb(185, 185, 185);
+}
+/* customizing the play button */
+.play-btn {
+	background-color: black;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	opacity: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	transition: all ease-in-out 0.1s;
+}
+/* on hover effects */
+.play-btn:hover {
+	opacity: 0.7;
+}
+/* adjusting fonts in the playlist items  */
+.left div p {
+	font-size: 14px;
+}
+.center {
+	font-size: 12px;
+	color: rgb(185, 185, 185);
+}
+.right {
+	color: rgb(185, 185, 185);
+}
+.right div:nth-child(2) {
+	margin-left: 27%;
+}
+/* second section of the page starts here */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* "more" button properties */
+label {
+	display: none;
+	position: absolute;
+	right: 0%;
+	top: 20%;
+	padding-bottom: 5px;
+	z-index: 3;
+	box-shadow: 0px 0px 2px 1px white;;
 	width: 70px;
-	padding-left: 2%;
+	font-size: 20px;
+	height: 21px;
+	text-align: center;
+	background-image: linear-gradient(red, blue);
+}
+/* on a normal display, it will be hidden */
+label ~ input {
+	display: none;
+}
+/* ASIDE SECTION -2 */
+/* this is the first section heading of the aside section 2 */
+.section-heading {
+	margin-top: 10px;
+	position: relative;
+	margin-bottom: 12px;
+}
+/* adjusting for side by side display */
+.section-heading div,
+.section-heading h1 {
+	display: inline-block;
+}
+.section-heading h1 {
+	font-size: 23px;
+}
+.section-heading div {
+	position: absolute;
+	bottom: 0%;
+	right: 0px;
+	font-size: 14px;
 }
 
-.song-list h4{
-	color: aqua;
-	padding-left: 2%;
+.list {
+	height: 36vh;
+	overflow: scroll;
 }
-.song-list h3{
-	color: aqua;
-	padding-left: 5%;
+/* hiding the scrollbar */
+.list::-webkit-scrollbar {
+	display: none;
 }
-.song-list h5{
-	color: aqua;
-	padding-left: 9%;
+/* this is particular item in the "list  container*/
+.list-item {
+	width: 100%;
+	height: 100px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	margin-bottom: 12px;
 }
-.song-list i{
-	color: red;
-	padding-left: 200px;
-	padding-top: 3%;
-	
+/* hovering effect for the list item */
+.list-item:hover {
+	background-color: var(--playlist-items-background-color-on-hover);
 }
-#right button{
-	background: linear-gradient(45deg,rgb(47, 0, 255),rgb(255, 0, 212));
-	width: 150px;
-	height: 30px;
-	border: none;
-	
+/* adjusting the name and image of the songs relative to their original position */
+.list-item > div:nth-child(1) {
+	width: 100px;
+	height: 100%;
+	position: relative;
 }
-#right h3{
-	text-align: end;
-	font-family: 'Redressed', cursive;
+.list-item > div:nth-child(1) > img {
+	width: 100%;
+	height: 100%;
 }
-.about1 h2{
-	text-align: end;
-	color: aqua;
-	padding-top: 8%;
+.author-name {
+	font-size: 12px;
+	color: rgb(185, 185, 185);
 }
-.block {
-    position: fixed;
-    background: #2184cd;
-    color: #fff;
-    padding: 20px;
-    width: auto;
+.extra {
+	text-align: right;
+	height: 100%;
 }
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-/* bottom section */
 /* Footer section starts here*/
 /* this is the container for the whole footer */
 footer {
-	position: fixed;
+	position: absolute;
 	bottom: 1px;
-	width: 101%;
-	height: 65px;
-	left: -.43%;
-	background-color: #0a1066;
+	width: 100%;
+	height: 60px;
+	background-color: #282828;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -437,6 +566,7 @@ footer {
 .slidecontainer {
 	width: 100%;
 }
+
 /* for audio and main center player */
 .slider {
 	-webkit-appearance: none;
@@ -448,10 +578,12 @@ footer {
 	-webkit-transition: 0.2s;
 	transition: opacity 0.2s;
 }
+
 /* hover effect for the slider */
 .slider:hover {
 	opacity: 1;
 }
+
 /* these are for adjusting the dimensions and default styling of the long-slider */
 .slider::-webkit-slider-thumb {
 	-webkit-appearance: none;
@@ -462,6 +594,7 @@ footer {
 	background: #007bff;
 	cursor: pointer;
 }
+
 /* this is the circular thumb, which can be moved across the div */
 .slider::-moz-range-thumb {
 	width: 25px;
@@ -479,15 +612,4 @@ footer {
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
-}
-
-/* Hovering the box */
-.container .song-list:hover{
-	background-color: rgb(255, 147, 147);
-}
-.song-list i{
-	animation-name: rotate;
-	animation-duration: 2.5s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
 }
