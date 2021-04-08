@@ -125,14 +125,7 @@ main::-webkit-scrollbar {
 	}
 }
 /* favourites text */
-.favs {
-	animation-name: flexible;
-	animation-timing-function: ease-in-out;
-	animation-duration: 2s;
-	perspective: 10000px;
-	transform-style: preserve-3d;
-	animation-iteration-count: infinite;
-}
+
 /* search bar */
 .search-bar {
 	width: 20%;
@@ -196,10 +189,7 @@ input:focus {
 .notification-bell img {
 	width: 30px;
 	height: 30px;
-	animation-name: ringing_bell;
-	animation-duration: 0.5s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
+	
 }
 /* profile picture of the user */
 .profile-picture img {
